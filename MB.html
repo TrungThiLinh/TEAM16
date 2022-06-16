@@ -5,19 +5,372 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Demo_BT</title>
 	<!-- Import Boostrap css, js, font awesome here -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+	<link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- Data -->
+		<script type="text/javascript" src="data/comments-data.js"></script>
+
+		<!-- Libraries -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>
+		<script type="text/javascript" src="js/jquery-comments.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link href="Style_demo.css" rel="stylesheet">
-</head>
-<body>
-     <p>“Mắt biếc” được Nguyễn Nhật Ánh sáng tác vào năm 1990. Và rồi sau 30 năm ra mắt độc giả, vào một ngày tháng 2 Ngạn và Hà Lan lại cùng nhau rời khỏi những trang sách và bước vào thế giới một dự án điện ảnh cùng tên vô cùng được mong đợi. Các bạn khi cầm cuốn sách trên tay sẽ bị ấn tượng ngay bởi tiêu đề cùng cách thiết kế bìa sách nhẹ nhàng.
+    <!-- Init jquery-comments -->
+		<script type="text/javascript">
+			$(function() {
+				var saveComment = function(data) {
 
-        Tiêu đề chỉ vỏn vẹn hai chữ “Mắt biếc” nhưng đã mở ra rất nhiều cung bậc cảm xúc cho độc giả bởi ai cũng biết mắt biếc là một đôi mắt đẹp nhưng lại mang nét buồn. Phần nào cũng gợi nên một cốt truyện có nội dung phảng phất những nỗi buồn. Cách thiết kế bìa sách mang tới một cảm giác dễ chịu với phông xanh chủ đạo và hình ảnh một người con trai ngồi đánh đàn bên cô gái dưỡi tán cây được phác họa một cách đơn giản.
-        
-        Cuốn sách kể về cuộc đời của chàng trai thuộc trường phái cổ điển tên Ngạn được sinh ra và lớn lên trong ngôi làng Đo Đo ở vùng quê Quảng Nam. Tuổi thơ của cậu gắn liền với cô bạn hàng xóm Hà Lan, một cô gái mang hơi hướng hiện đại và nổi bật với đôi mắt biếc. Tuổi thơ của cả hai là chuỗi những kỉ niệm đẹp ở làng, bên đồi sim, cùng nhau cởi truồng tắm mưa, những ngày tiểu học giành nhau đánh trống trường,…và là những câu nói hồn nhiên đáng yêu cực kì của hai đứa trẻ.</p>   
+					// Convert pings to human readable format
+					$(Object.keys(data.pings)).each(function(index, userId) {
+					    var fullname = data.pings[userId];
+					    var pingText = '@' + fullname;
+					    data.content = data.content.replace(new RegExp('@' + userId, 'g'), pingText);
+					});
+
+					return data;
+				}
+				$('#comments-container').comments({
+					profilePictureURL: 'user.PNG',
+					currentUserId: 1,
+					roundProfilePictures: true,
+					textareaRows: 1,
+					enableAttachments: true,
+					enableHashtags: true,
+					enablePinging: true,
+					scrollContainer: $(window),
+					searchUsers: function(term, success, error) {
+					    setTimeout(function() {
+					        success(usersArray.filter(function(user) {
+					            var containsSearchTerm = user.fullname.toLowerCase().indexOf(term.toLowerCase()) != -1;
+					            var isNotSelf = user.id != 1;
+					            return containsSearchTerm && isNotSelf;
+					        }));
+					    }, 500);
+					},
+					getComments: function(success, error) {
+						setTimeout(function() {
+							success(commentsArray);
+						}, 500);
+					},
+					postComment: function(data, success, error) {
+						setTimeout(function() {
+							success(saveComment(data));
+						}, 500);
+					},
+					putComment: function(data, success, error) {
+						setTimeout(function() {
+							success(saveComment(data));
+						}, 500);
+					},
+					deleteComment: function(data, success, error) {
+						setTimeout(function() {
+							success();
+						}, 500);
+					},
+					upvoteComment: function(data, success, error) {
+						setTimeout(function() {
+							success(data);
+						}, 500);
+					},
+					validateAttachments: function(attachments, callback) {
+						setTimeout(function() {
+							callback(attachments);
+						}, 500);
+					},
+				});
+			});
+		</script>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+body {
+  font-family: 'Roboto', Helvetica;
+  color: #737373;
+  font-weight: 300;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 3em;
+  background-color: #EFEFEF;
+  padding: 4px;
+}
+
+.inner {
+  padding: 1em;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  -webkit-border-radius: 4px; 
+  -moz-border-radius: 4px; 
+  border-radius: 4px; 
+}
+
+.rating {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+  text-align: center;
+}
+
+.rating-num {
+  color: #333333;
+  font-size: 72px;
+  font-weight: 100;
+  line-height: 1em; 
+}
+
+.rating-stars {
+  font-size: 20px;
+  color: #E3E3E3;
+  margin-bottom: .5em;
+}
+.rating-stars .active {
+  color: #737373;
+}
+
+.rating-users {
+  font-size: 14px;
+}
+
+.histo {
+  float: left;
+  width: 50%;
+  font-size: 13px;
+}
+
+.histo-star {
+  float: left;
+  padding: 3px;
+
+}
+
+.histo-rate {
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+.bar-block {
+  margin-left: 5px;
+  color: black;
+  display: block;
+  float: left;
+  width: 75%;
+  position: relative;
+}
+
+.bar {
+  padding: 4px;
+  display: block;
+}
+
+#bar-five {
+  width: 0;
+  background-color: #9FC05A;
+}
+
+#bar-four {
+  width: 0;
+  background-color: #ADD633;
+}
+
+#bar-three {
+  width: 0;
+  background-color: #FFD834;
+}
+
+#bar-two {
+  width: 0;
+  background-color: #FFB234;
+}
+
+#bar-one {
+  width: 0;
+  background-color: #FF8B5A;
+}
+        </style>
+    <body style="background-color:rgb(156, 233, 240);">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" >
+        <div class="container-fluid" style="background-color: rgb(248, 195, 204);">
+            <a class="navbar-branch" href="#">
+                <img src="http://thepixelboutique.com/wp-content/uploads/2019/02/logo-thuong-hieu-apple.jpg" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="demo2_BT.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demo2_theLoai.html">Thể Loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demo2_tacGia.html">Tác giả</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demo2_SuKien.html">Sự Kiện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đánh giá </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid padding" style="background-color:rgb(156, 233, 240);">
+            <div class="col-md-14">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title"><strong>Mắt biếc &minus; Kết cục buồn cho những kẻ ôm mối tình si</strong></h3>
+                        <div style="font-size: 20px;">
+                        <br>
+                        <p><b>Mắt biếc được tác giả Nguyễn Nhật Ánh sáng tác vào năm 1990. 30 năm sau, câu chuyện ngây thơ tình si ngày nào của Ngạn và Hà Lan cuối cùng đã được lên màn ảnh rộng.</b></p>
+                        <p>Viết về Mắt biếc là viết về những mối tình si. Không chỉ một mà tới 3 câu chuyện tình. Và chỉ một trong số đó được cái kết có hậu.</p>
+                        <p>
+                            Câu chuyện mở đầu với tuổi thơ của Ngạn, một cậu bé thuộc trường phái cổ điển và cô gái hơi hướng hiện đại Hà Lan. Hai người bên nhau từ thời cởi truồng tắm mưa, những ngày tiểu học giành cái trống trường, cho đến những tháng ngày lặng lẽ làm đôi bạn cùng tiến, và nổi giông bão ở cái thời điểm Hà Lan lên thành phố học hành.
+                        </p>
+                        <img src="MB1.PNG" alt="MB">
+                        <p>
+                            Cho dù Nguyễn Nhật Ánh đã cố giành lấy sự đồng cảm của độc giả khi để dành nhân vật “tôi” trong vai Ngạn tự kể về thời ấu thơ cho tới khi trưởng thành, kể về những tháng ngày được ở bên cạnh Hà Lan. Nhưng không thể phủ nhận một sự thật rằng, cậu bé Ngạn và cô bé Lan của ngày nào vốn dĩ đã sống ở 2 thế giới hoàn toàn khác nhau, cho dù khởi đầu chung một môi trường giáo dục.
+                            Ngạn là một kẻ nhút nhát, rụt rè, sống nội tâm và không có gì nổi bật</p>
+                        <br>
+                        <p>Trái lại, “mắt biếc” Hà Lan mang danh cô gái miền quê xa xứ, nhưng lại đặc biệt mến thương chốn xa hoa thị thành. Cô dường như được sinh ra để dành trọn tình yêu cho những gì đẹp đẽ ở thành phố, nơi mà Lan lần đầu tiên đi học đã quay về miêu tả rằng “đó là nơi huyền ảo, đẹp lung linh gấp trăm lần quê mình”.</p> 
+                        <br>
+                        <p>Ngạn thích những gì cổ điển, những gì rụt rè, những gì âm thầm, những mối tình câm, ý tại ngôn ngoại.</p> 
+                        <img src="MB2.PNG" alt="MB" style="margin-left: auto; margin-right: auto;">
+                        <p>Lan phá cách, lớn trước tuổi. Cô yêu Dũng ở độ tuổi trăng tròn, và sống chết với mối tình ấy một cách hết sức ngây thơ, nhàm chán.
+
+                            Và dĩ nhiên là 2 con người ấy, vốn ngay từ đầu định mệnh đã an bài rằng họ chỉ có thể làm bạn</p>
+                        <p> <b>Ngạn là bài học cảnh tỉnh cho những anh chàng thích đóng vai trai tốt</b> </p>
+                        <p> No love for good man &minus; Không có tình yêu nào cho những trai tốt! Ông bà đã đúc kết thành câu châm ngôn như vậy từ xa xưa, nhưng vẫn không ít chàng trai thời đại bây giờ vẫn thích đóng vai trai tốt.</p>
+                            
+                        <p>Bởi họ đang hiểu nhầm cái nghĩa thực sự của “trai tốt”
+                            
+                            Và Hà Lan đã định nghĩa được đúng đắn nhất cái danh xưng này, thông qua một nhân vật không thể thảm hại hơn, không ai khác chính là Ngạn!
+                            
+                            Khi nào Ngạn biết được Hà Lan không yêu mình? Đó là thời điểm mà cô nghe tiếng đàn của anh.
+                            
+                            Có cô gái nào nghe chàng trai bên cạnh đánh đàn cho mình hơn một năm trời, mà không hiểu ý tứ của anh ta? Chẳng ai hết. Hà Lan biết Ngạn yêu mình, và vô cùng thất vọng khi hơn 1 năm trời mà anh chàng lù đù cục mịch kia chỉ dám “gảy đàn”. Một lời thốt ra cũng tuyệt nhiên không có.</p>
+                                
+                        <p> Thậm chí đến phút cuối cùng, chán nản cô mới hỏi “rõ ràng bài này ông sáng tác phải hông”, thì Ngạn mới thành thật “ừ đúng rồi, tất cả những bài hát trước nay tôi đàn đều là do tui tự sáng tác”
+
+Và Hà Lan cũng biết tỏng từ lâu rồi. Trời ạ, cái giây phút đó mà Ngạn tỏ tình luôn, thì mối tình ấy đã kết thúc ngay từ lúc ấy, chứ nó không đau đớn thành một câu chuyện day dứt nhiều năm liền
+
+Có thể một anh chàng rụt rè như trường hợp này, vẫn còn có thể cứu vãn. Nhưng rồi khi Lan lên thành phố, khi bắt gặp Dũng, mọi cơ hội đã chính thức khép lại với chàng Ngạn tội nghiệp ngày nào! Bởi ngay lúc đó, Dũng hơn hẳn Ngạn về mọi mặt. Dù sau này Dũng lộ chân tướng là trai xấu, nhưng ít nhất hắn cũng thú vị hơn cậu bé rụt rè ở quê
+
+Nhiều năm sau, khi mà con gái của Hà Lan đã lên lớp 9, khi mà Ngạn lẫn Hà Lan đều đã ngoài 30, Ngạn một lần nữa lại không thể lọt vào mắt xanh của cô gái năm ấy, một kết cục không thể thảm hại hơn!</p>
+                                <img src="MB3.PNG" alt="MB">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div style="background-color: white;">
+                <p style="text-align: center;font-size: 25px;"> <u><b>Bình Luận:</b></u></p>
+                <br>
+                <div id="comments-container" ></div>
+                </div>
+
+                <div class="container">
+                    <div class="inner">
+                      <div class="rating">
+                        <span class="rating-num">4.0</span>
+                        <div class="rating-stars">
+                          <span><i class="active icon-star"></i></span>
+                          <span><i class="active icon-star"></i></span>
+                          <span><i class="active icon-star"></i></span>
+                          <span><i class="active icon-star"></i></span>
+                          <span><i class="icon-star"></i></span>
+                        </div>
+                        <div class="rating-users">
+                          <i class="icon-user"></i> 1,014,004 total
+                        </div>
+                      </div>
+                      
+                      <div class="histo">
+                        <div class="five histo-rate">
+                          <span class="histo-star">
+                            <i class="active icon-star"></i> 5           </span>
+                          <span class="bar-block">
+                            <span id="bar-five" class="bar">
+                              <span>566,784</span>&nbsp;
+                            </span> 
+                          </span>
+                        </div>
+                        
+                        <div class="four histo-rate">
+                          <span class="histo-star">
+                            <i class="active icon-star"></i> 4           </span>
+                          <span class="bar-block">
+                            <span id="bar-four" class="bar">
+                              <span>171,298</span>&nbsp;
+                            </span> 
+                          </span>
+                        </div> 
+                        
+                        <div class="three histo-rate">
+                          <span class="histo-star">
+                            <i class="active icon-star"></i> 3           </span>
+                          <span class="bar-block">
+                            <span id="bar-three" class="bar">
+                              <span>94,940</span>&nbsp;
+                            </span> 
+                          </span>
+                        </div>
+                        
+                        <div class="two histo-rate">
+                          <span class="histo-star">
+                            <i class="active icon-star"></i> 2           </span>
+                          <span class="bar-block">
+                            <span id="bar-two" class="bar">
+                              <span>44,525</span>&nbsp;
+                            </span> 
+                          </span>
+                        </div>
+                        
+                        <div class="one histo-rate">
+                          <span class="histo-star">
+                            <i class="active icon-star"></i> 1           </span>
+                          <span class="bar-block">
+                            <span id="bar-one" class="bar">
+                              <span>136,457</span>&nbsp;
+                            </span> 
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <script>
+                    function calcRate(r) 
+                    $(document).ready(function() {
+  $('.bar span').hide();
+  $('#bar-five').animate({
+     width: '75%'}, 1000);
+  $('#bar-four').animate({
+     width: '35%'}, 1000);
+  $('#bar-three').animate({
+     width: '20%'}, 1000);
+  $('#bar-two').animate({
+     width: '15%'}, 1000);
+  $('#bar-one').animate({
+     width: '30%'}, 1000);
+  
+  setTimeout(function() {
+    $('.bar span').fadeIn('slow');
+  }, 1000);
+  
+});
+                </script>
 </body>
