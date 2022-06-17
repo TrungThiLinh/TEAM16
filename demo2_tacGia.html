@@ -15,7 +15,7 @@
     <link href="Style_demo.css" rel="stylesheet">
 </head>
 <body>
-     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+     	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-branch" href="#">
                 <img src="./img/logo.png" height="60">
@@ -31,7 +31,7 @@
                         <a class="nav-link active" href="demo2_BT.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="demo2_tacGia.html">Tác Giả</a>
+                        <a class="nav-link active" href="demo2_theLoai.html">Thể Loại</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="demo2_tacGia.html">Tác giả</a>
@@ -80,310 +80,283 @@
             </div>
         </div>
     </div>
-    
-    <div class="container-fluid padding" style="background-color: white;">
-        <div class="row welcome text-center">
-            <div class="col-12" style="color: rgb(242, 154, 169);">
-                <h1 class="display-4">Tác Giả</h1>
-            </div>
-            <br>
-            <div class="container-fluid padding" style="background-color: #FFEFD5;">
-                <div class="row padding">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img class="card-img-top" id="MB" src="https://upload.wikimedia.org/wikipedia/vi/9/92/Mat_Biec.gif" >
-                            <div class="card-body">
-                                
-                                <a href="sach.html" class="btn btn-outline-secondary">Nguyễn Nhật Ánh</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img class="card-img-top" id="MB" src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dac-nhan-tam.jpg" >
-                            <div class="card-body">
-                                
-                                <a href="MB.html" class="btn btn-outline-secondary">John Doe</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/400x400/ts/product/3a/e1/60/8bf3e1ddfb01a8c898087a30302339a6.jpg" >
-                            <div class="card-body">
-                                
-                                <a href="MB.html" class="btn btn-outline-secondary">Kim Wan</a>
-                            </div>
-                        </div>
-                    </div>
+    <center><h1>Tác Giả</h1></center>
+    <section id="filter">
+       
+        <div id="filter_button">     
+             <a class="btn btn-primary active" data-filter="all">All</a>
+             <!-- <a class="btn btn-primary" data-filter="price">Price</a> -->
+             <a class="btn btn-primary" data-filter="cakes">Việt Nam</a>
+             <a class="btn btn-primary" data-filter="cupcakes">Nước Ngoài</a>
+             
+        </div>
+        <form action="" id="input_filter">
+            <span>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+            <input type="text" placeholder="filter item ..." id="search-item" autocomplete="off">
+        </form>
+ 
+        <div id="filter-data">
+             <div class="element_cakes" data-item="cakes">
+                
+                <a href="sach.html"><img class="card-img-top" id="MB" src="https://upload.wikimedia.org/wikipedia/vi/9/92/Mat_Biec.gif" ></a>
+                 <div class="infor">
+                     <h1 class="name_item">Nguyễn Nhật Ánh</h1>
+                     
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cakes">
+                <a href="t.html"><img class="card-img-top" id="MB" src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dac-nhan-tam.jpg "></a>
+                 <div class="infor">
+                     <h1 class="name_item">John Doe</h1>
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cupcakes">
+                <a href="m.html"><img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/400x400/ts/product/3a/e1/60/8bf3e1ddfb01a8c898087a30302339a6.jpg"></a>
+                 <div class="infor">
+                     <h1 class="name_item">Kim Wan</h1>
+                     
+                 </div>
+             </div>
             
-                </div>
-            </div>
-
-		
-        <div class="container-fluid padding" style="background-color: #FFEFD5;">
-            <div class="row padding">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/w1200/ts/product/73/6f/dd/02386331c1123bd4b409b474c09274cf.jpg" >
-                        <div class="card-body">
-                            
-                            <a href="MB.html" class="btn btn-outline-secondary">Dan-he Cho</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/400x400/ts/product/3a/e1/60/8bf3e1ddfb01a8c898087a30302339a6.jpg" >
-                        <div class="card-body">
-                            
-                            <a href="MB.html" class="btn btn-outline-secondary">Kim Wan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" id="MB" src="https://product.hstatic.net/200000015262/product/9_242323150a71db8248d4f422db09d791_96a3855348864c848ee6d06a5bf78882_1024x1024.jpg" >
-                        <div class="card-body">
-                            
-                            <a href="MB.html" class="btn btn-outline-secondary">Cao Minh</a>
-                        </div>
-                    </div>
-                </div>
-	</div>
-</div>
-<div class="container-fluid padding" style="background-color: #FFEFD5;">
-	<div class="row padding">
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://www.netabooks.vn/Data/Sites/1/Product/38159/xin-ban-hay-om-lay-trai-tim-minh-truoc-da-1.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Dae Hyun Yoon</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://toplist.vn/images/800px/ben-nhau-tron-doi-67045.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Cố Mạn</a>
-				</div>
-			</div>
-		</div>
-        <div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631291447i/30287380.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Ngộ Cẩn</a>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<div class="container-fluid padding" style="background-color: #FFEFD5;">
-	<div class="row padding">
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/w1200/ts/product/73/6f/dd/02386331c1123bd4b409b474c09274cf.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Dan-he Cho</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/400x400/ts/product/3a/e1/60/8bf3e1ddfb01a8c898087a30302339a6.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Kim Wan</a>
-				</div>
-			</div>
-		</div>
-        <div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://product.hstatic.net/200000015262/product/9_242323150a71db8248d4f422db09d791_96a3855348864c848ee6d06a5bf78882_1024x1024.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Cao Minh</a>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-<div class="container-fluid padding" style="background-color: #FFEFD5;">
-	<div class="row padding">
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://www.netabooks.vn/Data/Sites/1/Product/38159/xin-ban-hay-om-lay-trai-tim-minh-truoc-da-1.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Dae Hyun Yoon</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://www.netabooks.vn/Data/Sites/1/Product/36394/dung-noi-voi-anh-ay-toi-van-con-nho.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Lục Xu</a>
-				</div>
-			</div>
-		</div>
-        <div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631291447i/30287380.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Ngộ Cẩn</a>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-<div class="container-fluid padding" style="background-color: #FFEFD5;">
-	<div class="row padding">
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/w1200/ts/product/73/6f/dd/02386331c1123bd4b409b474c09274cf.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Dan-he Cho</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/400x400/ts/product/3a/e1/60/8bf3e1ddfb01a8c898087a30302339a6.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Kim Wan</a>
-				</div>
-			</div>
-		</div>
-        <div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://product.hstatic.net/200000015262/product/9_242323150a71db8248d4f422db09d791_96a3855348864c848ee6d06a5bf78882_1024x1024.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Cao Minh</a>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-<div class="container-fluid padding" style="background-color: #FFEFD5;">
-	<div class="row padding">
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://www.netabooks.vn/Data/Sites/1/Product/38159/xin-ban-hay-om-lay-trai-tim-minh-truoc-da-1.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Dae Hyun Yoon</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://upload.wikimedia.org/wikipedia/vi/1/15/T%C6%B0_%C4%90%E1%BA%B1ng_poster.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Vĩ Ngư</a>
-				</div>
-			</div>
-		</div>
-        <div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://www.dtv-ebook.com/images/cover_1/he-thong-xuyen-nhanh_-boss-phan-dien-dot-kich-mac-linh.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Mặc Linh</a>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-<div class="container-fluid padding" style="background-color: #FFEFD5;">
-	<div class="row padding">
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/w1200/ts/product/73/6f/dd/02386331c1123bd4b409b474c09274cf.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Dan-he Cho</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://truyentiki.com/a/img/str/src/50926.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Hài Tử Bang</a>
-				</div>
-			</div>
-		</div>
-        <div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" id="MB" src="https://product.hstatic.net/200000015262/product/9_242323150a71db8248d4f422db09d791_96a3855348864c848ee6d06a5bf78882_1024x1024.jpg" >
-				<div class="card-body">
-					
-					<a href="MB.html" class="btn btn-outline-secondary">Cao Minh</a>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-
-        
-        
-        <div class="container-fluid padding" style="background-color: #FFEFD5;">
-            <div class="row padding">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" id="MB" src="https://upload.wikimedia.org/wikipedia/vi/9/92/Mat_Biec.gif" >
-                        <div class="card-body">
-                            
-                            <a href="MB.html" class="btn btn-outline-secondary">Nguyễn Nhật Ánh</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" id="MB" src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dac-nhan-tam.jpg" >
-                        <div class="card-body">
-                            
-                            <a href="MB.html" class="btn btn-outline-secondary">John Doe</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/400x400/ts/product/3a/e1/60/8bf3e1ddfb01a8c898087a30302339a6.jpg" >
-                        <div class="card-body">
-                            
-                            <a href="MB.html" class="btn btn-outline-secondary">Kim Wan</a>
-                        </div>
-                    </div>
-                </div>
-        
-            </div>
+             <div class="element_cakes" data-item="cupcakes">
+                <a href="t.html"><img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/w1200/ts/product/73/6f/dd/02386331c1123bd4b409b474c09274cf.jpg"></a>
+                 <div class="infor">
+                     <h1 class="name_item">Da-he Cho</h1>
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dac-nhan-tam.jpg "></a>
+                 <div class="infor">
+                     <h1 class="name_item">John Doe</h1>
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cupcakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/w1200/ts/product/73/6f/dd/02386331c1123bd4b409b474c09274cf.jpg"></a>
+                 <div class="infor">
+                     <h1 class="name_item">Da-he Cho</h1>
+                  
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cupcakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://www.netabooks.vn/Data/Sites/1/Product/38159/xin-ban-hay-om-lay-trai-tim-minh-truoc-da-1.jpg "></a>
+                 <div class="infor">
+                     <h1 class="name_item">Dae huyn yoon</h1>
+            
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dac-nhan-tam.jpg "></a>
+                 <div class="infor">
+                     <h1 class="name_item">John Doe</h1>
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cupcakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/400x400/ts/product/3a/e1/60/8bf3e1ddfb01a8c898087a30302339a6.jpg"></a>
+                 <div class="infor">
+                     <h1 class="name_item">Kim Wan</h1>
+                     
+                 </div>
+             </div>
+             
+             <div class="element_cakes" data-item="cupcakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://salt.tikicdn.com/cache/w1200/ts/product/73/6f/dd/02386331c1123bd4b409b474c09274cf.jpg"></a>
+                 <div class="infor">
+                     <h1 class="name_item">Da-he Cho</h1>
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dac-nhan-tam.jpg "></a>
+                 <div class="infor">
+                     <h1 class="name_item">John Doe</h1>
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cupcakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://www.dtv-ebook.com/images/cover_1/he-thong-xuyen-nhanh_-boss-phan-dien-dot-kich-mac-linh.jpg"></a>
+                 <div class="infor">
+                     <h1 class="name_item">Mặc Linh</h1>
+                  
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cakes">
+                <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dac-nhan-tam.jpg "></a>
+                 <div class="infor">
+                     <h1 class="name_item">Cake coconut</h1>
+            
+                 </div>
+             </div>
+             <div class="element_cakes" data-item="cupcakes">
+                 <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://product.hstatic.net/200000015262/product/9_242323150a71db8248d4f422db09d791_96a3855348864c848ee6d06a5bf78882_1024x1024.jpg"></a>
+                  <div class="infor">
+                      <h1 class="name_item">Cao Minh</h1>
+                   
+                  </div>
+              </div>
+              <div class="element_cakes" data-item="cupcakes">
+                 <a href="https://www.google.com.vn/"><img class="card-img-top" id="MB" src="https://upload.wikimedia.org/wikipedia/vi/1/15/T%C6%B0_%C4%90%E1%BA%B1ng_poster.jpg "></a>
+                  <div class="infor">
+                      <h1 class="name_item">Vĩ Ngư</h1>
+             
+                  </div>
+              </div>
+             <h1 id="showtext"></h1>
         </div>
         
-
+    </section>
+    <section id="modal" >
+        <div class="modal_box show">
+             <div class="fa fa-window-close"></div>
+             <div class="lightbox"></div>
+             <div class="fa fa-caret-left"></div>
+             <div class="fa fa-caret-right"></div>
+        </div>
+    </section>
     
+     <script>
+       const name_item = document.querySelectorAll('.name_item');
+ const search_item = document.getElementById('search-item');
+ const element_cakes = document.querySelectorAll('.element_cakes');
+ const filter_button = document.querySelectorAll('#filter_button .btn');
+ const h1_price = document.querySelectorAll('h1.price');
+ 
+ search_item.addEventListener('keyup',getItem);
+ search_item.addEventListener('click',reset);
+ 
+ function reset(){
+     for(let i=0;i<filter_button.length;i++){
+         filter_button[i].classList.remove('active');
+     }
+     Array.from(element_cakes).forEach(function(element){
+         element.style.display = 'block';
+     })
+     filter_button[0].classList.add('active');
+     
+ }
+ 
+ 
+ 
+ // search item
+ var h1Text = document.getElementById('showtext');
+ 
+ const infor = document.querySelectorAll('.infor');
+ function getItem(event){
+ 
+     let lower_item = search_item.value.toLowerCase();
+     Array.from(infor).forEach(function(cake){
+         let item_Name = cake.firstElementChild.textContent;
+         if(item_Name.toLowerCase().indexOf(lower_item) != -1){
+             cake.parentElement.style.display = 'block';
+         }
+         else {            
+             cake.parentElement.style.display = 'none';
+             
+         }
+     })
+     
+     checkNone(infor);
+ }
+ 
+ // function check if all infor[] has display none => textContent = 'can't find'
+ function checkNone(target_element){
+     var sum=0;
+     for(let i=0;i<target_element.length;i++){
+         if(target_element[i].parentElement.style.display === 'block'){
+             sum++;
+         }
+     }
+     if(sum==0){
+         h1Text.textContent = "can't find.";
+     }
+     else {
+         h1Text.textContent = "";
+     }
+ }
+ 
+ // filter
+ Array.from(filter_button).forEach(function(button){
+     button.addEventListener('click',function(event){
+ 
+         for(let i=0;i<filter_button.length;i++){
+             filter_button[i].classList.remove('active');
+         }
+         this.classList.add('active');
+ 
+         let buttonAttr = event.target.dataset.filter;
+         // let buttonAttr = button.getAttribute('data-filter');
+         Array.from(element_cakes).forEach(function(element){
+             let elementAttr = element.dataset.item; // lấy giá trị data-* dùng getAttribute hoặc dataset
+             if(buttonAttr===elementAttr  || buttonAttr === 'all'){
+                 element.style.display = 'block';
+             }   
+             else {
+                 element.style.display = 'none';
+             }
+         })
+     })
+ })
+ 
+ 
+ 
+ // function reverseString(str){
+ //     return str.split("").reverse().join("");
+ // }
+ 
+ // modal box
+ 
+ const arrayImg = ['cake-1','cake-2','cake-3','cake-4','cake-5','cupcake-1','cupcake-2','cupcake-3','cupcake-3','cupcake-5','cupcake-6','cupcake-7','cupcake-8','cupcake-9','cupcake-10','cupcake-11'
+ ];
+ const modal_div = document.getElementById('modal');
+ const imgBox = document.querySelector('.lightbox');
+ 
+ let pos = 0;
+ Array.from(element_cakes).forEach(function(cake){
+     cake.addEventListener('click',function(){
+         let srcImg = this.firstElementChild.getAttribute('src');
+         
+         for(let i=0;i<arrayImg.length;i++){
+             if(srcImg.indexOf(arrayImg[i]) != -1){
+                 modal_div.style.display = 'block';
+                 imgBox.style.backgroundImage = `url(images/${arrayImg[i]}.jpeg)`;
+                 imgBox.style.backgroundSize = 'cover';
+                 imgBox.style.backgroundPosition = 'center';
+                 pos = i;
+             }
+         }
+         // let imgThis = `images/${}.jpeg`; 
+     })
+ })
+ // button modal box
+ const leftBt = document.querySelector('.fa-caret-left');
+ const rightBt = document.querySelector('.fa-caret-right');
+ 
+ leftBt.addEventListener('click',slidePre);
+ function slidePre(){
+     pos--;
+     if(pos < 0){
+         pos = arrayImg.length - 1;
+     }
+     imgBox.style.backgroundImage = `url(images/${arrayImg[pos]}.jpeg)`;
+ }
+ rightBt.addEventListener('click',slideNext);
+ function slideNext(){
+     pos++;
+     if(pos > arrayImg.length-1){
+         pos = 0;
+     }
+     imgBox.style.backgroundImage = `url(images/${arrayImg[pos]}.jpeg)`;
+ }
+ 
+ modal_div.addEventListener('click',function(event){
+     let eventButton = event.target.classList;
+     if(eventButton.contains('fa-caret-left') || eventButton.contains('fa-caret-right')){
+         this.style.display = 'block';
+     }
+     else{
+         this.style.display = 'none';
+     }
+ })
+     </script>
     
 
     <div class="container-fluid padding" id="KT" style="background: rgb(248, 195, 204);">	
