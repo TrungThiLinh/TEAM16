@@ -5,21 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Demo_BT</title>
 	<!-- Import Boostrap css, js, font awesome here -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-		<!-- Data -->
-		<script type="text/javascript" src="data/comments-data.js"></script>
-
-		<!-- Libraries -->
+				<!-- Libraries -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>
-		<script type="text/javascript" src="js/jquery-comments.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
-    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <link href="Style_demo1.css" rel="stylesheet">    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!-- Init jquery-comments -->
 		<script type="text/javascript">
 			$(function() {
@@ -86,148 +84,82 @@
 			});
 		</script>
         <style>
-            @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
-@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
-body {
-  font-family: 'Roboto', Helvetica;
-  color: #737373;
-  font-weight: 300;
+            .panel {
+    width: 60%;
+    margin: 0 auto;
+    border: solid #4267b2 1px;
 }
 
-.container {
-  width: 400px;
-  margin: 0 auto;
-  margin-top: 3em;
-  background-color: #EFEFEF;
-  padding: 4px;
+.panel-heading {
+    background-color: #4267b2;
+    padding: 10px;
+    color: white;
 }
 
-.inner {
-  padding: 1em;
-  background-color: white;
-  overflow: hidden;
-  position: relative;
-  -webkit-border-radius: 4px; 
-  -moz-border-radius: 4px; 
-  border-radius: 4px; 
+.panel-body {
+    padding: 10px;
 }
 
-.rating {
-  float: left;
-  width: 45%;
-  margin-right: 5%;
-  text-align: center;
+.panel-body label {
+    font-weight: bold;
 }
 
-.rating-num {
-  color: #333333;
-  font-size: 72px;
-  font-weight: 100;
-  line-height: 1em; 
+.form-group {
+    display: block;
+    margin-bottom: 20px;
 }
 
-.rating-stars {
-  font-size: 20px;
-  color: #E3E3E3;
-  margin-bottom: .5em;
-}
-.rating-stars .active {
-  color: #737373;
+.form-control {
+    display: block;
+    width: 98%;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.rating-users {
-  font-size: 14px;
+.table {
+    width: 100%;
 }
 
-.histo {
-  float: left;
-  width: 50%;
-  font-size: 13px;
+.table tr {
+    border-bottom: solid blue 1px;
 }
-
-.histo-star {
-  float: left;
-  padding: 3px;
-
-}
-
-.histo-rate {
-  width: 100%;
-  display: block;
-  clear: both;
-}
-
-.bar-block {
-  margin-left: 5px;
-  color: black;
-  display: block;
-  float: left;
-  width: 75%;
-  position: relative;
-}
-
-.bar {
-  padding: 4px;
-  display: block;
-}
-
-#bar-five {
-  width: 0;
-  background-color: #9FC05A;
-}
-
-#bar-four {
-  width: 0;
-  background-color: #ADD633;
-}
-
-#bar-three {
-  width: 0;
-  background-color: #FFD834;
-}
-
-#bar-two {
-  width: 0;
-  background-color: #FFB234;
-}
-
-#bar-one {
-  width: 0;
-  background-color: #FF8B5A;
-}
+#img{
+    height: 50px;
+    width: 50px;
+  }
         </style>
     <body style="background-color:rgb(156, 233, 240);">
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" >
-        <div class="container-fluid" style="background-color: rgb(248, 195, 204);">
-            <a class="navbar-branch" href="#">
-                <img src="http://thepixelboutique.com/wp-content/uploads/2019/02/logo-thuong-hieu-apple.jpg" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" 
-                data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="demo2_BT.html">Trang chủ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="demo2_theLoai.html">Thể Loại</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="demo2_tacGia.html">Tác giả</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="demo2_SuKien.html">Sự Kiện</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Đánh giá </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" >
+	<div class="container-fluid" style="background-color: rgb(243, 200, 207);">
+		<a class="navbar-branch" href="#">
+			<img src="./img/logo.png" height="60">
+			
+		</a>
+		<h2 style="float: left;">Review Books 3s</h2>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link active" href="demo2_BT.html">Trang chủ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="demo2_theLoai.html">Thể Loại</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="demo2_tacGia.html">Tác giả</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="danhgia1.html">Phản hồi </a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
     <div class="container-fluid padding" style="background-color:rgb(156, 233, 240);">
             <div class="col-md-14">
                 <div class="card">
@@ -240,7 +172,7 @@ body {
                         <p>
                             Câu chuyện mở đầu với tuổi thơ của Ngạn, một cậu bé thuộc trường phái cổ điển và cô gái hơi hướng hiện đại Hà Lan. Hai người bên nhau từ thời cởi truồng tắm mưa, những ngày tiểu học giành cái trống trường, cho đến những tháng ngày lặng lẽ làm đôi bạn cùng tiến, và nổi giông bão ở cái thời điểm Hà Lan lên thành phố học hành.
                         </p>
-                        <img src="MB1.PNG" alt="MB">
+                        <img src="img/MB1.PNG" alt="MB">
                         <p>
                             Cho dù Nguyễn Nhật Ánh đã cố giành lấy sự đồng cảm của độc giả khi để dành nhân vật “tôi” trong vai Ngạn tự kể về thời ấu thơ cho tới khi trưởng thành, kể về những tháng ngày được ở bên cạnh Hà Lan. Nhưng không thể phủ nhận một sự thật rằng, cậu bé Ngạn và cô bé Lan của ngày nào vốn dĩ đã sống ở 2 thế giới hoàn toàn khác nhau, cho dù khởi đầu chung một môi trường giáo dục.
                             Ngạn là một kẻ nhút nhát, rụt rè, sống nội tâm và không có gì nổi bật</p>
@@ -248,7 +180,7 @@ body {
                         <p>Trái lại, “mắt biếc” Hà Lan mang danh cô gái miền quê xa xứ, nhưng lại đặc biệt mến thương chốn xa hoa thị thành. Cô dường như được sinh ra để dành trọn tình yêu cho những gì đẹp đẽ ở thành phố, nơi mà Lan lần đầu tiên đi học đã quay về miêu tả rằng “đó là nơi huyền ảo, đẹp lung linh gấp trăm lần quê mình”.</p> 
                         <br>
                         <p>Ngạn thích những gì cổ điển, những gì rụt rè, những gì âm thầm, những mối tình câm, ý tại ngôn ngoại.</p> 
-                        <img src="MB2.PNG" alt="MB" style="margin-left: auto; margin-right: auto;">
+                        <img src="img/MB2.PNG" alt="MB" style="margin-left: auto; margin-right: auto;">
                         <p>Lan phá cách, lớn trước tuổi. Cô yêu Dũng ở độ tuổi trăng tròn, và sống chết với mối tình ấy một cách hết sức ngây thơ, nhàm chán.
 
                             Và dĩ nhiên là 2 con người ấy, vốn ngay từ đầu định mệnh đã an bài rằng họ chỉ có thể làm bạn</p>
@@ -270,7 +202,7 @@ Và Hà Lan cũng biết tỏng từ lâu rồi. Trời ạ, cái giây phút đ
 Có thể một anh chàng rụt rè như trường hợp này, vẫn còn có thể cứu vãn. Nhưng rồi khi Lan lên thành phố, khi bắt gặp Dũng, mọi cơ hội đã chính thức khép lại với chàng Ngạn tội nghiệp ngày nào! Bởi ngay lúc đó, Dũng hơn hẳn Ngạn về mọi mặt. Dù sau này Dũng lộ chân tướng là trai xấu, nhưng ít nhất hắn cũng thú vị hơn cậu bé rụt rè ở quê
 
 Nhiều năm sau, khi mà con gái của Hà Lan đã lên lớp 9, khi mà Ngạn lẫn Hà Lan đều đã ngoài 30, Ngạn một lần nữa lại không thể lọt vào mắt xanh của cô gái năm ấy, một kết cục không thể thảm hại hơn!</p>
-                                <img src="MB3.PNG" alt="MB">
+                                <img src="img/MB3.PNG" alt="MB">
                             </div>
                         </div>
                         </div>
@@ -280,97 +212,61 @@ Nhiều năm sau, khi mà con gái của Hà Lan đã lên lớp 9, khi mà Ng�
                 <div style="background-color: white;">
                 <p style="text-align: center;font-size: 25px;"> <u><b>Bình Luận:</b></u></p>
                 <br>
-                <div id="comments-container" ></div>
-                </div>
-
-                <div class="container">
-                    <div class="inner">
-                      <div class="rating">
-                        <span class="rating-num">4.0</span>
-                        <div class="rating-stars">
-                          <span><i class="active icon-star"></i></span>
-                          <span><i class="active icon-star"></i></span>
-                          <span><i class="active icon-star"></i></span>
-                          <span><i class="active icon-star"></i></span>
-                          <span><i class="icon-star"></i></span>
-                        </div>
-                        <div class="rating-users">
-                          <i class="icon-user"></i> 1,014,004 total
-                        </div>
-                      </div>
-                      
-                      <div class="histo">
-                        <div class="five histo-rate">
-                          <span class="histo-star">
-                            <i class="active icon-star"></i> 5           </span>
-                          <span class="bar-block">
-                            <span id="bar-five" class="bar">
-                              <span>566,784</span>&nbsp;
-                            </span> 
-                          </span>
-                        </div>
-                        
-                        <div class="four histo-rate">
-                          <span class="histo-star">
-                            <i class="active icon-star"></i> 4           </span>
-                          <span class="bar-block">
-                            <span id="bar-four" class="bar">
-                              <span>171,298</span>&nbsp;
-                            </span> 
-                          </span>
-                        </div> 
-                        
-                        <div class="three histo-rate">
-                          <span class="histo-star">
-                            <i class="active icon-star"></i> 3           </span>
-                          <span class="bar-block">
-                            <span id="bar-three" class="bar">
-                              <span>94,940</span>&nbsp;
-                            </span> 
-                          </span>
-                        </div>
-                        
-                        <div class="two histo-rate">
-                          <span class="histo-star">
-                            <i class="active icon-star"></i> 2           </span>
-                          <span class="bar-block">
-                            <span id="bar-two" class="bar">
-                              <span>44,525</span>&nbsp;
-                            </span> 
-                          </span>
-                        </div>
-                        
-                        <div class="one histo-rate">
-                          <span class="histo-star">
-                            <i class="active icon-star"></i> 1           </span>
-                          <span class="bar-block">
-                            <span id="bar-one" class="bar">
-                              <span>136,457</span>&nbsp;
-                            </span> 
-                          </span>
-                        </div>
-                      </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        Nhập Bình luận
                     </div>
-                  </div>
+                    <div class="panel-body">
+                        <form method="post">
+                            <div class="form-group">
+                                <label>Name:</label>
+                                <input type="number" name="index" id="index" value="" hidden="true">
+                                <input class="form-control" type="text" name="product_name" id="name" placeholder="Enter name">
+                            </div>
+                            <div class="form-group">
+                                <label>Comment:</label>
+                                <input type="number" name="index" id="index" value="" hidden="true">
+                                <input class="form-control" type="text" name="product_C" id="comment" placeholder="Enter Comment">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success" type="button" onclick="add()">Add</button>
+                                <button class="btn btn-danger" type="reset">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel" style="margin-top: 20px;">
+                    <div class="panel-heading">
+                        
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Comment</th>
+                                </tr>
+                            </thead>
+                            <tbody id="result">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <script>
-                    function calcRate(r) 
-                    $(document).ready(function() {
-  $('.bar span').hide();
-  $('#bar-five').animate({
-     width: '75%'}, 1000);
-  $('#bar-four').animate({
-     width: '35%'}, 1000);
-  $('#bar-three').animate({
-     width: '20%'}, 1000);
-  $('#bar-two').animate({
-     width: '15%'}, 1000);
-  $('#bar-one').animate({
-     width: '30%'}, 1000);
-  
-  setTimeout(function() {
-    $('.bar span').fadeIn('slow');
-  }, 1000);
-  
-});
-                </script>
+                    function add(){
+                        var Name = document.getElementById("name").value
+                        var Comment = document.getElementById("comment").value
+                       
+                        document.getElementById('result').innerHTML +=`<tr>
+                                <td> <img src="img/AnhDaiDien.PNG" id="img"></td>
+                                <td>${Name}</td>
+                                <td>${Comment}</td>
+                                </tr>`
+                    }
+                    
+                </script>            
+            
+               
 </body>

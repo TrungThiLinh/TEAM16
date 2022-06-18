@@ -1,0 +1,279 @@
+
+@import url('https://fonts.google.com/specimen/Nuosu+SIL');
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Nuosu SIL';
+	font-size: 28px;
+	color: #222;
+    background-color:white;
+}
+
+.navbar {
+	background-color: rgb(248, 195, 204) !important;
+}
+.navbar h2{
+    color: white;
+    margin-left: 10px;
+}
+.navbar li a {
+    color: white !important;
+}
+/* ví dụ*/
+.navbar ul li{
+    list-style: none; /* bỏ dấu chấm mặc định của li */
+    /* kẻ đường bên trái và bên phải của li */
+    border-right: 1px solid #ccc;
+    border-left:1px solid #333;
+}
+.navbar> ul li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 50px;
+    color: #f1f2f3;
+    text-decoration: none;
+}
+.navbar ul li:first-child {
+    border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
+}
+.navbar> ul li:first-child a{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* Khi hover đến li, tô màu cho thẻ a */
+.navbar ul li:hover>a{
+    background: red;
+    opacity: .7;
+    color: yellow;
+}
+.navbar li ul{
+    display: none;
+    min-width: 350px;
+    position: absolute;
+}
+.navbar li>ul li{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #999;
+    text-align: left;
+}
+.navbar li>ul li:first-child a{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.navbar li>ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.navbar li>ul li:last-child a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*khi hover thì hiện menu con*/
+.navbar  li:hover > ul{
+    display:  block;
+}
+
+.navbar > ul li > ul li >ul{
+    margin-left: 352px;
+    margin-top: -50px;
+}
+
+
+
+
+.navbar li a:hover {
+    color: black !important;
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 650px;
+}
+
+.carousel-caption {
+    position: absolute;
+
+}
+.carousel-caption h1{
+    font-size: 300%;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 15px #000;
+    
+}
+.carousel-caption h3 {
+    font-size: 150%;
+    text-shadow: 2px 2px 10px #000;
+    
+}
+
+
+.btn-primary{
+    background-color: white;
+    border: 1px solid white;
+    color: rgb(212, 141, 151);
+}
+.btn-primary:hover {
+    background-color: rgb(214, 144, 155);
+    border: 1px solid white;
+}
+/*media query*/
+@media (max-width: 992px){
+    .carousel-caption{
+        top: 20%;
+    }
+    .carousel-caption h1{
+        font-size: 250%;
+    }
+    .carousel-caption h3{
+        font-size: 160%;
+    }
+    .carousel-caption .btn{
+        font-size: 120%;
+    }
+}
+@media (max-width: 768px){
+    .carousel-caption {
+        top: 20%;
+    }
+    .carousel-caption h1 {
+        font-size: 220%;
+    }
+    .carousel-caption h3 {
+        font-size: 140%;
+        padding-bottom: 0.2rem;
+    }
+    .carousel-caption .btn{
+        font-size: 95%;
+        padding: 8px 15px;
+    }
+
+}
+@media (max-width: 576px){
+    .carousel-caption {
+        top: 10%;
+    }
+    .carousel-caption h1{
+        font-size: 150%;
+    }
+    .carousel-caption h3 {
+        font-size: 110%;
+    }
+    .carousel-caption .btn{
+        font-size: 90%;
+        padding: 4px 8px;
+    }
+}
+
+
+#MB{
+     margin-left: auto;
+     margin-right: auto;
+     height: 200px;
+    width: 150px;
+}
+#kinhdoanh{
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 150px;
+}
+#KT{
+    background: rgb(248, 195, 204);
+}
+#toan{
+    margin-left: auto;
+     margin-right: auto;
+     height: 200px;
+    width: 150px;
+}
+footer {
+    width: 100%;
+}
+.img1 img{
+    width: 100%;
+}
+.col-md-4 .card:hover{
+    background-color: rgb(243, 200, 207);
+}
+/* thẻ loại */
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+  }
+  
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide columns by default */
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn.active {
+    background-color: #666;
+     color: white;
+  }
+
