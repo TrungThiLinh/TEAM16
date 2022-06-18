@@ -97,8 +97,7 @@
                 <input type="submit" value="Đăng Nhập">
                 <p id="success"></p>
             </div>
-            <a href="viduDK.html" style="color: black;">Admin chưa có tài khoản?Đăng ký</a>
-            <a href="demo2_BT.html" style="color: black;">Trang chủ</a>
+            <a href="viduDK.html" class="login-link" style="color: black; float: left;">Đăng ký</a>
         </form>
     </div>
 </body>
@@ -127,8 +126,10 @@
             errorFlag = true;
         }
 
-        if(!errorFlag){
+    
+        else{
             alert("Đăng nhập thành công!!!!");
+            window.location.assign('demo2_BT.html');
         }
 
     }

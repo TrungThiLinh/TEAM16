@@ -106,7 +106,6 @@
                 <input type="submit" value="Đăng ký">
                 <p id="success"></p>
             </div>
-            <a href="viduDN.html" class="login-link" style="color: black; float: left;">Đăng Nhập</a>
         </form>
     </div>
 </body>
@@ -147,8 +146,13 @@
             errorFlag = true;
         }
 
-        if(!errorFlag){
+        /*if(!errorFlag){
             alert("Đăng ký thành công!!!!");
+        }
+        */
+        else{
+            alert("Đăng ký thành công!!!!");
+            window.location.assign('viduDN.html');
         }
 
     }
