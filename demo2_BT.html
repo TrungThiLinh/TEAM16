@@ -93,7 +93,12 @@
 		<div class="col-12" style="color: black; font-size: 30px;">
 			<p> Chào mừng bạn đến với trang web 3S của chúng tôi. Hi vọng bạn có những trải nghiệm tuyệt vời</p>
 		</div>
-		
+		<form action="" id="input_filter" style="margin-left: 200px;">
+            <span>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+            <input type="text" placeholder="Nhập tìm kiếm ..." id="search-item" autocomplete="off">
+        </form>
 	</div>
 </div>
 <br>
@@ -143,7 +148,7 @@
 				<div class="card-body">
 					<h4 class="card-title">Video review sách 1</h4>
 					<video width="100%" height="100%" controls>
-						<source src="/video/vid2.mp4" type="video/mp4">
+						<source src="./video/vid2.mp4" type="video/mp4">
 					</video>
 					<a href= " https://youtu.be/NLDoPUVmMEM " > Xem full video </a>	
 				</div>
@@ -158,7 +163,7 @@
 						Video review sách 2
 					</h4>
 					<video width="100%" height="100%" controls>
-						<source src="/video/vid1.mp4" type="video/mp4">
+						<source src="./video/vid1.mp4" type="video/mp4">
 					</video>
 					<a href= " https://youtu.be/NLDoPUVmMEM " > Xem full video </a>	
 				</div>
@@ -241,7 +246,7 @@
 						vid hay văn học
 					</h4>
 					<video width="100%" height="100%" controls>
-						<source src="/video/vanhoc.mp4" type="video/mp4">
+						<source src="./video/vanhoc.mp4" type="video/mp4">
 					</video>
 					<a href= " https://youtu.be/NLDoPUVmMEM " > Xem full video </a>			  
 				</div>
@@ -410,6 +415,15 @@
 	<i class="fa-solid fa-arrow-up-from-dotted-line"></i>
 </div>
 </body>
+<script>
+	function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+</script>
 
     
 
