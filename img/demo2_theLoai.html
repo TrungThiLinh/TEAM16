@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo_BT</title>
+	<!-- Import Boostrap css, js, font awesome here -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="Style_demo1.css" rel="stylesheet">
+    <style>
+        #navbar {
+  background-color: rgb(243, 139, 212); /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -10px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  margin-right: 0px;
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#the{
+  background-color: rgb(204, 207, 210);
+}
+
+    </style>
+    </head>
+<body background="rgb(204, 207, 210)">
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-branch" href="#">
+        <img src="./img/logo.png" height="60">
+        
+      </a>
+      <h2 style="float: left;">Review Books 3s</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="demo2_BT.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="demo2_theLoai.html">Thể Loại</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="demo2_tacGia.html">Tác giả</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="danhgia1.html">Phản hồi </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+      <br>
+      <br>
+    <h2>Thể loại:</h2>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('VH')">Văn Học</button>
+  <button class="btn" onclick="filterSelection('NT')">Ngôn Tình</button>
+  <button class="btn" onclick="filterSelection('TrinhTham')">Trinh Thám</button>
+  <button class="btn" onclick="filterSelection('IT')">IT</button>
+  <button class="btn" onclick="filterSelection('VN')">Việt Nam</button>
+  <button class="btn" onclick="filterSelection('other')">Nước Ngoài</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row" id="the">
+  <div class="column VH VN">
+    <div class="content">
+      <img src="img/MB4.PNG" alt="MB" style="width:95%">
+      <h4>Mắt Biếc</h4>
+      <p>Tác giả: Nguyễn Nhật Ánh</p>
+      <p>Mắt biếc _ Kết cục buồn cho những kẻ ôm mối tình si.</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+  <div class="column NT other">
+    <div class="content">
+      <img src="img/Lau.PNG" alt="NYCTTALMM" style="width:100%">
+      <h4>Người yêu cũ thấy tôi ăn lẩu một mình</h4>
+      <p>Tác giả: Hồ Dữu</p>
+      <p>Thể loại: Hiện đại, thực tế, gương vỡ lại lành, hơi ngược, ngành phát hành/pr phim điện ảnh, có hiểu lầm chia xa, chậm nhiệt, nhẹ nhàng, HE.</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+  <div class="column TrinhTham other">
+    <div class="content">
+      <img src="img/Thap.PNG" alt="10 tội ác" style="width:100%">
+      <h4>Mười tội ác</h4>
+      <p>Tác giả: Tri Thù</p>
+      <p>Mười Tội Ác Bộ là tiểu thuyết điều tra về 10 vụ án kinh thiên động địa được dựa trên nguyên mẫu 10 vụ án có thật từng gây chấn động toàn Trung Quốc.</p>
+    </div>
+  </div>
+
+  <div class="column IT VN">
+    <div class="content">
+      <img src="img/code.PNG" alt="IT" style="width:100%">
+      <h4>Code dạo ký sự &minus; Lập trình viên đâu chỉ biết Code</h4>
+      <p>Tác giả: Phạm Huy Hoàng</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+  <div class="column VH VN">
+    <div class="content">
+      <img src="img/DM.PNG" alt="DM" style="width:100%">
+      <h4>Dế Mèn phiêu lưu ký</h4>
+      <p>Tác giả: Tô Hoài</p>
+      <p>Dế Mèn phiêu lưu ký &minus; Thế giới làng quê dung dị mà sâu thẳm.</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+  <div class="column VH VN">
+    <div class="content">
+      <img src="img/SoDo.PNG" alt="SoDo" style="width:100%">
+      <h4>Số Đỏ</h4>
+      <p>Tác giả: Vũ Trọng Phụng</p>
+      <p>Số Đỏ &minus; Đứa Con Đáng Tự Hào Của “Ông Vua Phóng Sự Đất Bắc” Vũ Trọng Phụn</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+  <div class="column TrinhTham other">
+    <div class="content">
+      <img src="img/TPKCC.PNG" alt="TPKCC" style="width:100%">
+      <h4>Tội Phạm không chứng cứ</h4>
+      <p>Tác giả: Tử Kim Trần</p>
+      <p>Tội lỗi không chứng cứ là một câu chuyện đau thương về chính nghĩa và sự thiếu công bằng của công lý</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+  <div class="column VH other">
+    <div class="content">
+      <img src="img/TPKCC.PNG" alt="TPKCC" style="width:100%">
+      <h4>Những người khốn khổ</h4>
+      <p>Tác giả: Victor Hugo</p>
+      <p>Những người khốn khổ: Thiên sử anh hùng ca bất hủ của nhân loại.</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+  <div class="column IT other">
+    <div class="content">
+      <img src="img/TPP.PNG" alt="TPP" style="width:100%">
+      <h4>The Pragmatic Programmer</h4>
+      <p>Tác giả: Andy Hunt</p>
+      <p>The Pragmatic Programme là cuốn sách minh họa tốt nhất của những cạm bẫy và những khía cạnh khác nhau của sự phát triển phần mềm.</p>
+      <a href="MB.html" class="btn btn-outline-secondary">Đọc tiếp</a>
+    </div>
+  </div>
+
+<!-- END GRID -->
+</div>
+<div class="container-fluid padding" id="KT" style="background: rgb(248, 195, 204);">	
+	<div class="row text-center padding" >
+		<div class="col-12">
+			<h2>Contact us</h2>
+		</div>
+		<div class="col-12 social padding" style="color: white;">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
+</div>	
+<footer>
+	<div class="container-fluid padding" style="background: rgb(248, 195, 204)">	
+		<div class="row text-center">
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Group 14</h5>
+				<hr class="light">
+				<p>111-222-3333</p>
+				<p>mymail@gmail.com</p>
+				<p>Tay Son street, Hanoi, Vietnam</p>
+			</div>
+			<div class="col-md-4">				
+				<hr class="light">
+				<h5>Working hours</h5>
+				<hr class="light">
+				<p>Monday-Friday: 8am - 5pm</p>
+				<p>Weekend: 8am - 12am</p>
+			</div>
+			<div class="col-md-4">				
+				<hr class="light">
+				<h5>Services</h5>
+				<hr class="light">
+				<p>Outsourcing</p>
+				<p>Website development</p>
+				<p>Mobile applications</p>
+			</div>
+			<div class="col-12">
+				<hr class="light-100">
+				<h5>&copy; Group 14</h5>
+			</div>
+		</div>
+	</div>
+</footer>
+    <script>
+    filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+    </script>
+    
+</body>
+</html>
