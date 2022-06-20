@@ -135,3 +135,24 @@ footer {
 .col-md-4 .card:hover{
     background-color: rgb(243, 200, 207);
 }
+
+#filter {
+    min-height: 100vh;
+    margin-top: 10rem;
+    text-align: center;
+}
+#input_filter {
+    padding-top: 3rem;
+    text-align: center;
+    padding-left: 300px;
+    margin-left: 300px;
+}
+#filter-data {
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.4s;
+}
