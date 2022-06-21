@@ -74,7 +74,19 @@
 			margin-left: 120px;
 			padding-left: 120px;
 		}
-				
+		#top-up {
+		font-size: 2rem;
+		cursor: pointer;
+		position: fixed;
+		z-index: 9999;
+		color:red;
+		bottom: 20px;
+		right: 15px;
+		display: none;
+		}
+		#top-up:hover {
+		color: #333
+		}
 
 	</style>
 <!-- Navigation -->
@@ -101,7 +113,7 @@
 					<a class="nav-link" href="demo2_tacGia.html">Tác giả</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="demo2_SuKien.html">Sự Kiện</a>
+					<a class="nav-link" href="viduDN.html">đăng nhập</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="danhgia1.html">Phản hồi </a>
@@ -297,6 +309,7 @@
 		</div>
 		<!-- Add icon library -->
 		
+		
 
                             
 </div>
@@ -366,6 +379,7 @@
 		</div>
 	</div>
 </footer>
+<div style="text-align:center; font-size:30px;"><a href='#' title="Back to top">&#710;</a></div>
 </body>
 <!-- Bootstrap core JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -426,6 +440,28 @@
 
 	
 </script>
+<!-- import icon font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+<!-- Import thư viện JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+// kéo xuống khoảng cách 500px thì xuất hiện nút Top-up
+var offset = 500;
+// thời gian di trượt 0.75s ( 1000 = 1s )
+var duration = 750;
+$(function(){
+$(window).scroll(function () {
+if ($(this).scrollTop() > offset)
+$('#top-up').fadeIn(duration);else
+$('#top-up').fadeOut(duration);
+});
+$('#top-up').click(function () {
+$('body,html').animate({scrollTop: 0}, duration);
+});
+});
+</script>
+<div title="Về đầu trang" id="top-up">
+<i class="fas fa-arrow-circle-up"></i></div>
 <link rel="stylesheet" href="./Font-Awesomecss/css/font-awesome.min.css">
 	
 	

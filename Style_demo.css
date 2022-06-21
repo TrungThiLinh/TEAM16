@@ -156,3 +156,18 @@ footer {
     flex-wrap: wrap;
     transition: 0.4s;
 }
+
+
+#top-up {
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    color:red;
+    bottom: 20px;
+    right: 15px;
+    display: none;
+    }
+    #top-up:hover {
+    color: #333
+    }
