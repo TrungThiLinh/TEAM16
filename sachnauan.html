@@ -51,6 +51,31 @@
 			
 			text-align: center;
 		}
+		h4{
+			text-align: center;
+
+		}
+		.like.fa {
+		font-size: 100px;
+		cursor: pointer;
+		user-select: none;
+		width: 100px;
+		}
+		.fa:hover { 
+		color: darkblue;
+		width: 100px;
+		}
+		.active { 
+		color: darkblue;
+		}
+		.like #button{
+			width: 100px;
+			height: 100px;
+			margin-left: 120px;
+			padding-left: 120px;
+		}
+				
+
 	</style>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
@@ -258,9 +283,22 @@
 					
 				</div>
 			</div>
+			<hr>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			<!-- Use an element to toggle 
+				a like/dislike icon -->
+			<div class="like">
+				<h4>Bạn thấy bài viết của chúng tôi thế nào?</h4>
+				<p style="text-align: center;">Bạn sẽ thích chủ đề này chứ?</p>
+				<i id="button" class="fa fa-thumbs-up"></i>
+			</div>
 			
 		</div>
+		<!-- Add icon library -->
+		
 
+                            
 </div>
 	
 
@@ -329,7 +367,15 @@
 	</div>
 </footer>
 </body>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<link rel="stylesheet" href="./Font-Awesomecss/css/font-awesome.min.css">
+
 <script>
+	
 	const email = document.querySelector("#email");
     const success = document.querySelector("#success");
     const errorNodes = document.querySelectorAll(".error");
@@ -360,5 +406,27 @@
         let pattern = /\S+@\S+\.\S+/;
         return pattern.test(email);
     }
+
+	
+	 // lấy về button
+    var button = document.getElementById('button');
+    //gán sự kiện click 
+    button.addEventListener("click", function(){
+        //Lấy tất cả các class của button và chuyển thành chuỗi
+        var allClass = this.classList.toString();
+        // kiểm tra nếu chưa tồn tại class active thì thêm class active
+        if (allClass.indexOf('active') == -1) {
+            this.classList += ' active';
+        }
+        //Thêm hoặc xóa class fa-thumbs-down
+        this.classList.toggle("fa-thumbs-down");
+    });
+
+
+
+	
 </script>
+<link rel="stylesheet" href="./Font-Awesomecss/css/font-awesome.min.css">
+	
+	
 </html>	
